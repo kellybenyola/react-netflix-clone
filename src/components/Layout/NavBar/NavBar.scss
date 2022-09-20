@@ -1,0 +1,198 @@
+$medium: 960px;
+
+.navBar{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: black;
+    height: 5vh;
+    padding: 2% 4%;
+    display: flex;
+    flex-flow: row nowrap;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    align-items: center;
+    justify-content: space-between;
+
+    &.active{
+        animation: fadeIn 0.3s ease-in forwards;
+    }
+    &.notActive{
+        animation: fadeOut 0.3s ease-in forwards;
+    }
+        section{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+        }
+}
+
+
+.linksContainer ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.9rem;
+    font-weight: light;
+    align-items: center;
+    @media screen and (max-width: $medium) {
+        display: none;
+        .mobileMenu{
+            display: flex;
+        }
+     }    
+}
+.linksContainer li{
+ margin: 10px;
+
+}
+
+
+.rightSide{
+    div{
+        margin: 0 5px;
+    }
+    .userIcon{
+        width: 33px;
+        height: 33px;
+        border-radius: 10%;
+        overflow: hidden;
+    }
+    img{
+        width: 33px;
+    }
+}
+.search{
+    color: white;
+    background: none;
+    .icon{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    &.swipeOut{
+        animation: swipeOut 0.25s ease-in forwards;
+    }
+}
+
+
+.searchBar{
+    background:black;
+    border: white solid 1px;
+    font-size: 0.9rem;
+    padding: 5px;
+    animation: swipeIn 0.25s ease-in forwards;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .icon{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    input{
+        background:none;
+        font-size: 0.9rem;
+        border: none;
+        &::placeholder{
+            color: grey;
+        }
+        &:focus{
+            color: white;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.dropMenuContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+    .dropMenuBtn{
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 1.5rem;
+        align-items: center;
+        z-index: 5;
+        position: relative;
+    }
+    .dropMenu{
+        z-index: 6;
+        position: absolute;
+        top: 50px;
+    }
+
+}
+.rotateUp{
+    animation: rotateUp 0.25s ease-in forwards;
+}
+.rotateDown{
+    animation: rotateDown 0.25s ease-in forwards;
+}
+
+@keyframes swipeIn {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 300px;
+        opacity: 1;
+    }
+}
+@keyframes swipeOut {
+    0%{
+        width: 300px;
+        opacity: 1;
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    0%{
+        background: none;
+    }
+    100%{
+        background: black;
+    }
+    
+}
+
+@keyframes fadeOut {
+    0%{
+        background: black;
+    }
+    100%{
+        background: none;
+    }
+}
+
+@keyframes rotateUp {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotateDown {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}

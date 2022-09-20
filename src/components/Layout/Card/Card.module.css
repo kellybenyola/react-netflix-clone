@@ -1,0 +1,158 @@
+
+.card{
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+   
+}
+.card:hover{
+    z-index: 1;}
+
+
+
+.imgBox, .imgBoxLeft, imgBoxRight{
+    background: none;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+    z-index: 100;
+}
+.imgBoxRight:hover{
+    
+}
+.imgBox:hover{
+    background: black;
+    width: 350px;
+    animation: grow 0.3s ease-in forwards;
+    filter: drop-shadow(10px 10px 10px #000);
+}
+.imgBoxLeft:hover{
+    background: black;
+
+    width: 350px;
+    animation: grow 0.3s ease-in forwards ;
+    filter: drop-shadow(10px 10px 10px #000);
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card img:hover{
+    width: 350px;
+}
+
+.card h1{
+    font-size: 0.5rem;
+}
+
+.linksBox{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+}
+.linksBox div{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.linksBox a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem;
+
+    
+}
+.circle, .play, .likes{
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 0;
+
+}
+
+
+.play{
+    color: black;
+    border: none;
+    background: white;
+   
+   
+}
+.play a{
+    font-size: 2rem; 
+}
+.play a, .circle a, .likes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle, .likes{
+    border: solid grey 2px;
+   
+}
+/* .likes:hover{
+    border: none;
+    background: grey;
+    border-radius: 45%;
+    height: 40px;
+    width: 60px;
+    filter: drop-shadow(10px 10px 10px grey);
+
+} */
+.likesBox{
+    border-radius: 45%;
+
+    padding: 5%;
+    justify-content: center;
+    align-items: center; 
+    border:white solid 1px;
+    filter: drop-shadow(10px 10px 10px grey);
+    z-index: 3;
+    top: 0;
+    position: abosulte;
+    
+}
+@keyframes grow {
+    0% {
+        transform: scale(1);
+
+    }
+    100% {
+        left: 0;
+
+        transform: scale(1.1);
+   
+
+      
+    }
+}
+
+@keyframes growLeft {
+    0% {
+        transform: scale(0.5);
+        height: auto;
+        left: 0;
+    }
+    100% {
+
+        height: 100%;
+        left: 10px;
+        top: -25px;
+        transform: scale(1);
+      
+    }
+}
+
+@keyframes identifier {
+    0% { top: 0; left: 0; }
+    100% { top: -25px; left: 0; }
+  }

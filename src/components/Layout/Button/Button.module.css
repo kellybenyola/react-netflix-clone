@@ -1,0 +1,19 @@
+
+.button{
+    text-align: center;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.button:disabled{
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+
+/* transition-all ease-in-out duration-300 */
